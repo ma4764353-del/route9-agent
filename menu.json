@@ -1,0 +1,319 @@
+{
+  "restaurant_name": "Route 9 Burger Co.",
+  "currency": "USD",
+  "support_phone": "(555) 555-0199",
+  "timezone": "America/New_York",
+  "hours": {
+    "monday": ["10:00", "22:00"],
+    "tuesday": ["10:00", "22:00"],
+    "wednesday": ["10:00", "22:00"],
+    "thursday": ["10:00", "22:00"],
+    "friday": ["10:00", "23:00"],
+    "saturday": ["10:00", "23:00"],
+    "sunday": ["11:00", "21:00"]
+  },
+  "modifier_groups": {
+    "burger_extras": {
+      "name": "Add extras",
+      "selection": "multiple",
+      "options": [
+        { "id": "add_cheese", "label": "Add cheese", "price_delta": 0.99 },
+        { "id": "add_bacon", "label": "Add bacon", "price_delta": 1.49 },
+        { "id": "add_avocado", "label": "Add avocado", "price_delta": 1.29 },
+        { "id": "add_fried_egg", "label": "Add fried egg", "price_delta": 1.29 }
+      ]
+    },
+    "burger_removals": {
+      "name": "Remove ingredients",
+      "selection": "multiple",
+      "options": [
+        { "id": "no_onions", "label": "No onions", "price_delta": 0.0 },
+        { "id": "no_pickles", "label": "No pickles", "price_delta": 0.0 },
+        { "id": "no_tomato", "label": "No tomato", "price_delta": 0.0 },
+        { "id": "no_lettuce", "label": "No lettuce", "price_delta": 0.0 },
+        { "id": "no_sauce", "label": "No house sauce", "price_delta": 0.0 }
+      ]
+    },
+    "size": {
+      "name": "Size",
+      "selection": "single",
+      "required": true,
+      "options": [
+        { "id": "size_small", "label": "Small", "price_delta": 0.0 },
+        { "id": "size_medium", "label": "Medium", "price_delta": 0.75 },
+        { "id": "size_large", "label": "Large", "price_delta": 1.5 }
+      ]
+    },
+    "milkshake_flavor": {
+      "name": "Flavor",
+      "selection": "single",
+      "required": true,
+      "options": [
+        { "id": "flavor_vanilla", "label": "Vanilla", "price_delta": 0.0 },
+        { "id": "flavor_chocolate", "label": "Chocolate", "price_delta": 0.0 },
+        { "id": "flavor_strawberry", "label": "Strawberry", "price_delta": 0.0 },
+        { "id": "flavor_cookies_and_cream", "label": "Cookies and Cream", "price_delta": 0.5 }
+      ]
+    },
+    "soda_flavor": {
+      "name": "Flavor",
+      "selection": "single",
+      "required": true,
+      "options": [
+        { "id": "soda_cola", "label": "Cola", "price_delta": 0.0 },
+        { "id": "soda_diet_cola", "label": "Diet Cola", "price_delta": 0.0 },
+        { "id": "soda_root_beer", "label": "Root Beer", "price_delta": 0.0 },
+        { "id": "soda_lemon_lime", "label": "Lemon-Lime", "price_delta": 0.0 },
+        { "id": "soda_orange", "label": "Orange", "price_delta": 0.0 }
+      ]
+    },
+    "tea_type": {
+      "name": "Type",
+      "selection": "single",
+      "required": true,
+      "options": [
+        { "id": "tea_sweet", "label": "Sweet Tea", "price_delta": 0.0 },
+        { "id": "tea_unsweet", "label": "Unsweetened", "price_delta": 0.0 },
+        { "id": "tea_peach", "label": "Peach Tea", "price_delta": 0.0 }
+      ]
+    },
+    "pizza_size": {
+      "name": "Size",
+      "selection": "single",
+      "required": true,
+      "options": [
+        { "id": "pizza_personal", "label": "Personal (10\")", "price_delta": 0.0 },
+        { "id": "pizza_medium", "label": "Medium (14\")", "price_delta": 4.0 },
+        { "id": "pizza_large", "label": "Large (16\")", "price_delta": 7.0 }
+      ]
+    },
+    "pizza_toppings": {
+      "name": "Extra toppings",
+      "selection": "multiple",
+      "options": [
+        { "id": "topping_extra_cheese", "label": "Extra cheese", "price_delta": 1.5 },
+        { "id": "topping_pepperoni", "label": "Pepperoni", "price_delta": 1.75 },
+        { "id": "topping_mushrooms", "label": "Mushrooms", "price_delta": 1.25 },
+        { "id": "topping_olives", "label": "Olives", "price_delta": 1.25 },
+        { "id": "topping_jalapenos", "label": "Jalapenos", "price_delta": 1.0 }
+      ]
+    }
+  },
+  "categories": [
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "items": [
+        {
+          "id": "classic_burger",
+          "name": "Classic Burger",
+          "description": "Beef patty, lettuce, tomato, onion, pickles, house sauce",
+          "base_price": 8.99,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        },
+        {
+          "id": "cheeseburger",
+          "name": "Cheeseburger",
+          "description": "Classic burger with a slice of American cheese",
+          "base_price": 9.79,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        },
+        {
+          "id": "bacon_burger",
+          "name": "Bacon Burger",
+          "description": "Beef patty, cheddar, bacon, lettuce, tomato, house sauce",
+          "base_price": 10.99,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        },
+        {
+          "id": "veggie_burger",
+          "name": "Veggie Burger",
+          "description": "Plant-based patty, lettuce, tomato, onion, house sauce",
+          "base_price": 9.49,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        },
+        {
+          "id": "mushroom_swiss_burger",
+          "name": "Mushroom Swiss Burger",
+          "description": "Beef patty, sauteed mushrooms, melted swiss, house sauce",
+          "base_price": 10.49,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwiches",
+      "items": [
+        {
+          "id": "grilled_chicken_sandwich",
+          "name": "Grilled Chicken Sandwich",
+          "description": "Grilled chicken breast, lettuce, tomato, house sauce on a brioche bun",
+          "base_price": 9.99,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        },
+        {
+          "id": "turkey_club",
+          "name": "Turkey Club",
+          "description": "Roasted turkey, bacon, lettuce, tomato, mayo, triple-decker toast",
+          "base_price": 10.49,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        },
+        {
+          "id": "blt",
+          "name": "BLT",
+          "description": "Bacon, lettuce, tomato, mayo on toasted sourdough",
+          "base_price": 8.49,
+          "modifier_groups": ["burger_extras", "burger_removals"]
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "items": [
+        {
+          "id": "cheese_pizza",
+          "name": "Cheese Pizza",
+          "description": "Classic red sauce and mozzarella",
+          "base_price": 9.99,
+          "modifier_groups": ["pizza_size", "pizza_toppings"]
+        },
+        {
+          "id": "pepperoni_pizza",
+          "name": "Pepperoni Pizza",
+          "description": "Red sauce, mozzarella, pepperoni",
+          "base_price": 11.49,
+          "modifier_groups": ["pizza_size", "pizza_toppings"]
+        },
+        {
+          "id": "veggie_pizza",
+          "name": "Veggie Pizza",
+          "description": "Red sauce, mozzarella, mushrooms, olives, onions, bell peppers",
+          "base_price": 11.99,
+          "modifier_groups": ["pizza_size", "pizza_toppings"]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "items": [
+        {
+          "id": "fries",
+          "name": "French Fries",
+          "description": "Crispy golden fries, salted",
+          "base_price": 3.49,
+          "modifier_groups": ["size"]
+        },
+        {
+          "id": "onion_rings",
+          "name": "Onion Rings",
+          "description": "Beer-battered onion rings",
+          "base_price": 4.29,
+          "modifier_groups": ["size"]
+        },
+        {
+          "id": "side_salad",
+          "name": "Side Salad",
+          "description": "Mixed greens, tomato, cucumber, house vinaigrette",
+          "base_price": 3.99,
+          "modifier_groups": []
+        },
+        {
+          "id": "mozzarella_sticks",
+          "name": "Mozzarella Sticks",
+          "description": "Breaded mozzarella, marinara dipping sauce",
+          "base_price": 5.49,
+          "modifier_groups": []
+        },
+        {
+          "id": "coleslaw",
+          "name": "Coleslaw",
+          "description": "Creamy house-made coleslaw",
+          "base_price": 2.99,
+          "modifier_groups": []
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "items": [
+        {
+          "id": "soda",
+          "name": "Fountain Soda",
+          "description": "Choice of flavor, free refills for dine-in",
+          "base_price": 2.49,
+          "modifier_groups": ["soda_flavor", "size"]
+        },
+        {
+          "id": "lemonade",
+          "name": "Fresh Lemonade",
+          "description": "Squeezed daily",
+          "base_price": 2.99,
+          "modifier_groups": ["size"]
+        },
+        {
+          "id": "milkshake",
+          "name": "Milkshake",
+          "description": "Hand-spun shake",
+          "base_price": 4.99,
+          "modifier_groups": ["milkshake_flavor", "size"]
+        },
+        {
+          "id": "iced_tea",
+          "name": "Iced Tea",
+          "description": "Brewed daily, choice of sweet, unsweetened, or peach",
+          "base_price": 2.49,
+          "modifier_groups": ["tea_type", "size"]
+        },
+        {
+          "id": "bottled_water",
+          "name": "Bottled Water",
+          "description": "16.9 oz bottled water",
+          "base_price": 1.99,
+          "modifier_groups": []
+        }
+      ]
+    },
+    {
+      "id": "combos",
+      "name": "Combos",
+      "items": [
+        {
+          "id": "classic_combo",
+          "name": "Classic Combo",
+          "description": "Classic Burger + Fries + Drink",
+          "base_price": 12.99,
+          "includes": ["classic_burger", "fries", "soda"],
+          "modifier_groups": ["burger_extras", "burger_removals", "size", "soda_flavor"]
+        },
+        {
+          "id": "bacon_combo",
+          "name": "Bacon Combo",
+          "description": "Bacon Burger + Fries + Drink",
+          "base_price": 14.99,
+          "includes": ["bacon_burger", "fries", "soda"],
+          "modifier_groups": ["burger_extras", "burger_removals", "size", "soda_flavor"]
+        },
+        {
+          "id": "veggie_combo",
+          "name": "Veggie Combo",
+          "description": "Veggie Burger + Fries + Drink",
+          "base_price": 13.49,
+          "includes": ["veggie_burger", "fries", "soda"],
+          "modifier_groups": ["burger_extras", "burger_removals", "size", "soda_flavor"]
+        },
+        {
+          "id": "personal_pizza_combo",
+          "name": "Personal Pizza Combo",
+          "description": "Personal Cheese Pizza + Drink",
+          "base_price": 11.99,
+          "includes": ["cheese_pizza", "soda"],
+          "modifier_groups": ["pizza_toppings", "soda_flavor", "size"]
+        }
+      ]
+    }
+  ]
+}
